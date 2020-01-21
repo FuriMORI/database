@@ -11,7 +11,7 @@ var db = new sqlite3.Database('Uber.db')
 
 app.get('/', function (req, res, next) {
     var query = "\
-        SELECT restaurant_name, restaurant_address, charge, delivery_time, restaurant_evaluation\
+        SELECT restaurant_name, charge, delivery_time, restaurant_evaluation, category\
         FROM restaurant r\
         ";
         console.log("DBG:" + query);
